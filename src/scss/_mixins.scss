@@ -1,0 +1,116 @@
+// RADIUS
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// BACKGROUND SIZE
+@mixin background-size($background-size) {
+    -webkit-background-size: $background-size;
+    -moz-background-size: $background-size;
+    -o-background-size: $background-size;
+    background-size: $background-size;
+}
+
+// ANIMATION
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    animation: #{$str};
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+// BOX SHADOW
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// LINEAR GRADIENT
+@mixin linear-gradient($from, $to) {
+    background: $to;
+    background: -moz-linear-gradient(top, $from 0%, $to 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+    background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+    background: -o-linear-gradient(top, $from 0%,$to 100%);
+    background: linear-gradient(to bottom, $from 0%,$to 100%);
+}
+
+// OPACITY
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity = $opacity-ie);
+}
+
+// TRANSFORM
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
+// TRANSFORM ORIGIN
+@mixin transform-origin($origin) {
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+// TRANSITION
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition: $what $time $how;
+    -o-transition: $what $time $how;
+    transition: $what $time $how;
+}
+
+@mixin transitionDelay($delay) {
+    -webkit-transition-delay: $delay;
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -ms-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+@mixin transitionProperty($property) {
+    -webkit-transition-property: $property;
+    -moz-transition-property: $property;
+    -o-transition-property: $property;
+    -ms-transition-property: $property;
+    transition-property: $property;
+}
+
+@mixin transitionDuration($duration) {
+    -webkit-transition-duration: $duration;
+    -moz-transition-duration: $duration;
+    -o-transition-duration: $duration;
+    -ms-transition-duration: $duration;
+    transition-duration: $duration;
+}
+
+@mixin transitionTimingFunction($easing) {
+    -webkit-transition-timing-function: $easing;
+    -moz-transition-timing-function: $easing;
+    -o-transition-timing-function: $easing;
+    -ms-transition-timing-function: $easing;
+    transition-timing-function: $easing;
+}

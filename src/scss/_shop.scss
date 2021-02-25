@@ -1,0 +1,210 @@
+/* START FOR SHOPPING CART PAGE */
+.shopping_cart_pg_content{
+	padding:40px 0;
+	/* START FOR SHOPPING CART LEFTBAR */
+	.shopping_cart_leftbar{
+		position:sticky;
+		top:150px;
+		.shop_category{
+			margin-bottom: 20px;
+			.subtitle{
+				font-size: $font_base;
+				font-family: $ff_monst_m;
+				color:$gray_color_seven;
+				margin-bottom: 15px;
+			}
+			.list_shop_category{
+				margin: 0;
+				li{
+					&:not(:last-child){
+						margin-bottom: 15px;
+					}
+					color:$black_color_two;
+					font-size:$font_base_medium;
+					font-family:$ff_monst_m;
+				}
+			}
+		}
+		.sort_block{
+			.subtitle{
+				font-size: $font_base;
+				font-family: $ff_monst_m;
+				color:$gray_color_seven;
+				margin-bottom: 15px;
+			}
+			.list_sort{
+				li{
+					&:not(:last-child){
+						margin-bottom: 10px;
+					}
+					color:$black_color_two;
+					font-size:$font_base_medium;
+					font-family:$ff_monst_m;
+					.icon{
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+	.shopping_cart_rightbar{
+		.box_shopping_cart{
+			    cursor:pointer;
+				margin-bottom: 20px;
+				padding:15px;
+				position: relative;
+				border: 1px solid $gray_color_five;
+				@include border-radius(10px);
+				@include transition(all,.3s,linear);
+				&:hover{
+					@include box-shadow(6px 6px 15px rgba(0,0,0,.1));
+				}
+				.link_wishlist,.link_offer{
+					position: absolute;
+					top: 15px;
+					@include transition(all,.3s,linear);
+				}
+				.link_wishlist{
+					right: 15px;
+					&:hover{
+						svg{
+							.a,.b,.c{
+								stroke:$orange_color_two;
+								fill:$orange_color_two;
+								@include transition(all,.3s,linear);
+							}
+						}
+					}
+				}
+				.link_offer{
+					left: 15px;
+					color:$white_color;
+					font-size: $fs10;
+					font-family: $ff_monst_b;
+					letter-spacing: .5px;
+					background-color: $pink_color_two;
+					@include border-radius(4px);
+					padding:0 5px;
+					height: 20px;
+					overflow:hidden;
+					line-height: 20px; 
+				}
+				.thumb{
+					margin-bottom: 10px;
+					text-align: center;
+				}
+				.caption{
+					.subtitle{
+						font-family: $ff_monst_sb;
+						color:$blue_color_three;
+						line-height: 21px;
+						margin:0 0 10px;
+						font-size: $font_base_medium;
+					}
+					.rating_block{
+						margin-bottom: 10px;
+						position: relative;
+						.starRating {
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 10px;
+                            span {
+                                color: $orange_color_two;
+                                cursor: pointer;
+                                display: table-cell;
+                                position: relative;
+                                padding-right: 6px;
+                                font-size: $font-base;
+                                &:last-child {
+                                    padding-right: 0;
+                                }
+                                &:hover {
+                                    &~span {
+                                        color: $orange_color_two;
+                                        .fa-star-o {
+                                            opacity: 1 !important;
+                                        }
+                                        .fa-star {
+                                            opacity: 0 !important;
+                                        }
+                                    }
+                                }
+                            }
+                            i {
+                                transition: opacity 0.4s;
+                                font-size:$font-large;
+                            }
+                            .fa-star {
+                                color: $orange_color_two;
+                                position: absolute;
+                                left: 0;
+                                opacity: 0;
+                            }
+                            &:hover {
+                                .fa-star {
+                                    opacity: 1 !important;
+                                }
+                                .fa-star-o {
+                                    opacity: 0 !important;
+                                }
+                            }
+                        }
+                        .starRated {
+                            span.active {
+                                &~span {
+                                    color: $orange_color_two;
+                                    .fa-star-o {
+                                        opacity: 1;
+                                    }
+                                    .fa-star {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                            .fa-star {
+                                opacity: 1;
+                            }
+                            .fa-star-o {
+                                opacity: 0;
+                            }
+                        }
+					}
+					.value_add_block{
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						.value_block{
+							.txt_new_value{
+								color:$green_color_one;
+								font-size: $font_medium;
+								font-family: $ff_monst_sb;
+								margin-bottom: 3px;
+								display: block;
+							}
+							.txt_old_value{
+								color:$blue_color_three;
+								font-size: $fs10;
+								font-family: $ff_monst_m;
+								display: block;
+							}
+						}
+						.link_add{
+							height: 35px;
+							display: flex;
+							width: 76px;
+							@include border-radius(4px);
+							text-align: center;
+							align-items: center;
+							justify-content: space-between;
+							font-family: $ff_monst_m;
+							color:$primary_color;
+							background-color: $gray_color_six;
+							padding: 0 10px;
+						}
+					}
+				}
+		}
+	}
+	/* END FOR SHOPPING CART LEFTBAR */
+}
+/* END FOR SHOPPING CART PAGE */

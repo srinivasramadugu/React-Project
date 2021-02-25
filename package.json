@@ -6,10 +6,26 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.0",
+    "bootstrap": "^4.3.1",
+    "compile-sass": "^1.1.1",
+    "css-loader": "^5.0.2",
+    "jquery": "^3.5.1",
+    "ml5": "^1.0.0",
+    "node-modules": "^1.0.1",
+    "package": "^1.0.1",
+    "popper.js": "^1.16.1",
+    "protractor": "^7.0.0",
     "react": "^17.0.1",
+    "react-animated-css": "^1.2.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2",
-    "web-vitals": "^1.1.0"
+    "react-p5": "^1.3.8",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.2",
+    "react-slick": "^0.28.0",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^1.1.0",
+    "webpack": "^5.21.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +50,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.0.5",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^11.0.1"
   }
 }
